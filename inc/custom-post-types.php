@@ -1,0 +1,592 @@
+<?php
+
+/*Custom Post Types*/
+
+//News
+
+add_action('init', 'uc_slider_init');
+
+function uc_slider_init()
+
+{
+
+	$uc_labels = array(
+
+		'name' => _x('Slider', 'post type general name'),
+
+		'singular_name' => _x('Slider', 'post type singular name'),
+
+		'all_items' => __('All Slider'),
+
+		'add_new' => _x('Add Slider', 'Slider'),
+
+		'add_new_item' => __('Add Slider'),
+
+		'edit_item' => __('Edit Slider'),
+
+		'new_item' => __('New Slider'),
+
+		'view_item' => __('View Slider'),
+
+		'search_items' => __('Search in Slider'),
+
+		'not_found' =>  __('No Slider found'),
+
+		'not_found_in_trash' => __('No Slider found in trash'),
+
+		'parent_item_colon' => ''
+
+	);
+
+	$args = array(
+
+		'labels' => $uc_labels,
+
+		'public' => true,
+
+		'publicly_queryable' => true,
+
+		'show_ui' => true,
+
+		'query_var' => true,
+
+		'menu_icon' => get_stylesheet_directory_uri() . '/images/misc/quote-icon.png', /* Get these*/
+
+		'capability_Show' => 'post',
+
+		'hierarchical' => false,
+
+		'menu_position' => 4,
+
+		'has_archive' => 'true',
+
+		'supports' => array('title','excerpt','thumbnail')
+
+	);
+
+	register_post_type('slider',$args);
+
+}
+
+//News
+
+add_action('init', 'uc_news_init');
+
+function uc_news_init()
+
+{
+
+	$uc_labels = array(
+
+		'name' => _x('News', 'post type general name'),
+
+		'singular_name' => _x('News', 'post type singular name'),
+
+		'all_items' => __('All News'),
+
+		'add_new' => _x('Add News', 'News'),
+
+		'add_new_item' => __('Add News'),
+
+		'edit_item' => __('Edit News'),
+
+		'new_item' => __('New News'),
+
+		'view_item' => __('View News'),
+
+		'search_items' => __('Search in News'),
+
+		'not_found' =>  __('No News found'),
+
+		'not_found_in_trash' => __('No News found in trash'),
+
+		'parent_item_colon' => ''
+
+	);
+
+	$args = array(
+
+		'labels' => $uc_labels,
+
+		'public' => true,
+
+		'publicly_queryable' => true,
+
+		'show_ui' => true,
+
+		'query_var' => true,
+
+		'menu_icon' => get_stylesheet_directory_uri() . '/images/misc/quote-icon.png', /* Get these icons later, see Jeffrey Way course*/
+     // 'rewrite' => array( 'slug' => 'news', 'with_front' => false ), /* you can specify it's url slug */
+
+		'capability_Show' => 'post',
+
+		'hierarchical' => false,
+
+		'menu_position' => 4,
+
+		'has_archive' => 'true',
+
+		'supports' => array('title','editor','excerpt','comments','thumbnail')
+
+	);
+
+	register_post_type('news',$args);
+
+}
+
+//Photos
+
+add_action('init', 'uc_photos_init');
+
+function uc_photos_init()
+
+{
+
+	$uc_labels = array(
+
+		'name' => _x('Photos', 'post type general name'),
+
+		'singular_name' => _x('Photos', 'post type singular name'),
+
+		'all_items' => __('All Photos'),
+
+		'add_new' => _x('Add Photos', 'Photos'),
+
+		'add_new_item' => __('Add Photos'),
+
+		'edit_item' => __('Edit Photos'),
+
+		'new_item' => __('New Photos'),
+
+		'view_item' => __('View Photoss'),
+
+		'search_items' => __('Search in Photos'),
+
+		'not_found' =>  __('No Photos found'),
+
+		'not_found_in_trash' => __('No Photos found in trash'),
+
+		'parent_item_colon' => ''
+
+	);
+
+	$args = array(
+
+		'labels' => $uc_labels,
+
+		'public' => true,
+
+		'publicly_queryable' => true,
+
+		'show_ui' => true,
+
+		'query_var' => true,
+
+		'menu_icon' => get_stylesheet_directory_uri() . '/images/misc/quote-icon.png', /* Get these icons later, see Jeffrey Way course*/
+     // 'rewrite' => array( 'slug' => 'photos', 'with_front' => false ), /* you can specify it's url slug */
+
+		'capability_Show' => 'post',
+
+		'hierarchical' => false,
+
+		'menu_position' => 4,
+
+		'has_archive' => 'true',
+
+		'supports' => array('title','editor','excerpt','comments','thumbnail')
+
+	);
+
+	register_post_type('photos',$args);
+
+}
+
+
+//Galleries
+
+add_action('init', 'uc_galleries_init');
+
+function uc_galleries_init()
+
+{
+
+	$uc_labels = array(
+
+		'name' => _x('Galleries', 'post type general name'),
+
+		'singular_name' => _x('Galleries', 'post type singular name'),
+
+		'all_items' => __('All Galleries'),
+
+		'add_new' => _x('Add Galleries', 'Galleries'),
+
+		'add_new_item' => __('Add Galleries'),
+
+		'edit_item' => __('Edit Galleries'),
+
+		'new_item' => __('New Galleries'),
+
+		'view_item' => __('View Galleries'),
+
+		'search_items' => __('Search in Galleries'),
+
+		'not_found' =>  __('No Galleries found'),
+
+		'not_found_in_trash' => __('No Galleries found in trash'),
+
+		'parent_item_colon' => ''
+
+	);
+
+	$args = array(
+
+		'labels' => $uc_labels,
+
+		'public' => true,
+
+		'publicly_queryable' => true,
+
+		'show_ui' => true,
+
+		'query_var' => true,
+
+		'menu_icon' => get_stylesheet_directory_uri() . '/images/misc/quote-icon.png', /* Get these icons later, see Jeffrey Way course*/
+     // 'rewrite' => array( 'slug' => 'galleries', 'with_front' => false ), /* you can specify it's url slug */
+
+		'capability_Show' => 'post',
+
+		'hierarchical' => false,
+
+		'menu_position' => 4,
+
+		'has_archive' => 'true',
+
+		'supports' => array('title','editor','excerpt','comments','thumbnail')
+
+	);
+
+	register_post_type('galleries',$args);
+
+}
+
+//Writing
+
+add_action('init', 'uc_writing_init');
+
+function uc_writing_init()
+
+{
+
+	$uc_labels = array(
+
+		'name' => _x('Writing', 'post type general name'),
+
+		'singular_name' => _x('Writing', 'post type singular name'),
+
+		'all_items' => __('All Writing'),
+
+		'add_new' => _x('Add Writing', 'Writing'),
+
+		'add_new_item' => __('Add Writing'),
+
+		'edit_item' => __('Edit Writing'),
+
+		'new_item' => __('New Writing'),
+
+		'view_item' => __('View Writing'),
+
+		'search_items' => __('Search in Writing'),
+
+		'not_found' =>  __('No Writing found'),
+
+		'not_found_in_trash' => __('No Writing found in trash'),
+
+		'parent_item_colon' => ''
+
+	);
+
+	$args = array(
+
+		'labels' => $uc_labels,
+
+		'public' => true,
+
+		'publicly_queryable' => true,
+
+		'show_ui' => true,
+
+		'query_var' => true,
+
+		'menu_icon' => get_stylesheet_directory_uri() . '/images/misc/quote-icon.png', /* Get these icons later, see Jeffrey Way course*/
+     // 'rewrite' => array( 'slug' => 'writing', 'with_front' => false ), /* you can specify it's url slug */
+
+		'capability_Show' => 'post',
+
+		'hierarchical' => false,
+
+		'menu_position' => 4,
+
+		'has_archive' => 'true',
+
+		'supports' => array('title','editor','excerpt','comments','thumbnail')
+
+	);
+
+	register_post_type('writing',$args);
+
+}
+//Video
+
+add_action('init', 'uc_video_init');
+
+function uc_video_init()
+
+{
+
+	$uc_labels = array(
+
+		'name' => _x('Video', 'post type general name'),
+
+		'singular_name' => _x('Video', 'post type singular name'),
+
+		'all_items' => __('All Video'),
+
+		'add_new' => _x('Add Video', 'Video'),
+
+		'add_new_item' => __('Add Video'),
+
+		'edit_item' => __('Edit Video'),
+
+		'new_item' => __('New Video'),
+
+		'view_item' => __('View Video'),
+
+		'search_items' => __('Search in Video'),
+
+		'not_found' =>  __('No Video found'),
+
+		'not_found_in_trash' => __('No Video found in trash'),
+
+		'parent_item_colon' => ''
+
+	);
+
+	$args = array(
+
+		'labels' => $uc_labels,
+
+		'public' => true,
+
+		'publicly_queryable' => true,
+
+		'show_ui' => true,
+
+		'query_var' => true,
+
+		'menu_icon' => get_stylesheet_directory_uri() . '/images/misc/quote-icon.png', /* Get these icons later, see Jeffrey Way course*/
+     // 'rewrite' => array( 'slug' => 'video', 'with_front' => false ), /* you can specify it's url slug */
+
+		'capability_Show' => 'post',
+
+		'hierarchical' => false,
+
+		'menu_position' => 4,
+
+		'has_archive' => 'true',
+
+		'supports' => array('title','editor','excerpt','comments','thumbnail')
+
+	);
+
+	register_post_type('video',$args);
+
+}
+
+/*++++++++++++++++++++++++++++++++
+	TAXONOMIES
+	++++++++++++++++++++++++++++++++++*/
+
+
+//Type of Post (latest, home, etc)
+
+$show_labels = array(
+
+    'name' => _x( 'item-type', 'taxonomy general name' ),
+
+    'singular_name' => _x( 'item-type', 'taxonomy singular name' ),
+
+    'search_items' =>  __( 'Search in item-type' ),
+
+    'all_items' => __( 'All item-type' ),
+
+    'most_used_items' => null,
+
+    'parent_item' => null,
+
+    'parent_item_colon' => null,
+
+    'edit_item' => __( 'Edit item-type' ),
+
+    'update_item' => __( 'Update item-type' ),
+
+    'add_new_item' => __( 'Add new item-type' ),
+
+    'new_item_name' => __( 'New item-type' ),
+
+    'menu_name' => __( 'item-type' ),
+
+  );
+
+
+register_taxonomy('item-type',array('news', 'video', 'photos', 'articles'),array(
+
+    'hierarchical' => true,
+
+    'labels' => $show_labels,
+
+    'show_ui' => true,
+
+    'query_var' => true,
+
+    'rewrite' => array('slug' => 'item-type' )
+
+  ));
+
+
+//Era (or Date)
+
+$show_labels = array(
+
+    'name' => _x( 'item-date', 'taxonomy general name' ),
+
+    'singular_name' => _x( 'item-date', 'taxonomy singular name' ),
+
+    'search_items' =>  __( 'Search in item-date' ),
+
+    'all_items' => __( 'All item-date' ),
+
+    'most_used_items' => null,
+
+    'parent_item' => null,
+
+    'parent_item_colon' => null,
+
+    'edit_item' => __( 'Edit item-date' ),
+
+    'update_item' => __( 'Update item-date' ),
+
+    'add_new_item' => __( 'Add new item-date' ),
+
+    'new_item_name' => __( 'New item-date' ),
+
+    'menu_name' => __( 'item-date' ),
+
+  );
+
+
+register_taxonomy('item-date',array('news', 'video', 'photos', 'writing'),array(
+
+    'hierarchical' => true,
+
+    'labels' => $show_labels,
+
+    'show_ui' => true,
+
+    'query_var' => true,
+
+    'rewrite' => array('slug' => 'item-type' )
+
+  ));
+
+//Place (Uranium City/ Gunnar/ Eldorado/ Other mines)
+
+$show_labels = array(
+
+    'name' => _x( 'item-place', 'taxonomy general name' ),
+
+    'singular_name' => _x( 'item-place', 'taxonomy singular name' ),
+
+    'search_items' =>  __( 'Search in item-place' ),
+
+    'all_items' => __( 'All item-place' ),
+
+    'most_used_items' => null,
+
+    'parent_item' => null,
+
+    'parent_item_colon' => null,
+
+    'edit_item' => __( 'Edit item-place' ),
+
+    'update_item' => __( 'Update item-place' ),
+
+    'add_new_item' => __( 'Add new item-place' ),
+
+    'new_item_name' => __( 'New item-place' ),
+
+    'menu_name' => __( 'item-place' ),
+
+  );
+
+
+register_taxonomy('item-place',array('news', 'video', 'photos', 'writing'),array(
+
+    'hierarchical' => true,
+
+    'labels' => $show_labels,
+
+    'show_ui' => true,
+
+    'query_var' => true,
+
+    'rewrite' => array('slug' => 'item-place' )
+
+  ));
+
+//Source (Archive, person, personal collection, newspaper, magazine)
+
+$show_labels = array(
+
+    'name' => _x( 'item-source', 'taxonomy general name' ),
+
+    'singular_name' => _x( 'item-source', 'taxonomy singular name' ),
+
+    'search_items' =>  __( 'Search in item-source' ),
+
+    'all_items' => __( 'All item-source' ),
+
+    'most_used_items' => null,
+
+    'parent_item' => null,
+
+    'parent_item_colon' => null,
+
+    'edit_item' => __( 'Edit item-source' ),
+
+    'update_item' => __( 'Update item-source' ),
+
+    'add_new_item' => __( 'Add new item-source' ),
+
+    'new_item_name' => __( 'New item-source' ),
+
+    'menu_name' => __( 'item-source' ),
+
+  );
+
+
+register_taxonomy('item-source',array('news', 'video', 'photos', 'writing'),array(
+
+    'hierarchical' => true,
+
+    'labels' => $show_labels,
+
+    'show_ui' => true,
+
+    'query_var' => true,
+
+    'rewrite' => array('slug' => 'item-source' )
+
+  ));
+
+ ?>

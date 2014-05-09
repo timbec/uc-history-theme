@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'a_love_of_thunderregular';
+    src: url('../fonts/Cumberland_GodofThunder_Web/a_love_of_thunder-webfont.eot');
+    src: url('../fonts/Cumberland_GodofThunder_Web/a_love_of_thunder-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Cumberland_GodofThunder_Web/a_love_of_thunder-webfont.woff') format('woff'),
+         url('../fonts/Cumberland_GodofThunder_Web/a_love_of_thunder-webfont.ttf') format('truetype'),
+         url('../fonts/Cumberland_GodofThunder_Web/a_love_of_thunder-webfont.svg#a_love_of_thunderregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MonospaceTypewriterRegular';
+    src: url('../fonts/MonospaceTypewriter/MonospaceTypewriter-webfont.eot');
+    src: url('../fonts/MonospaceTypewriter/MonospaceTypewriter-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MonospaceTypewriter/MonospaceTypewriter-webfont.woff') format('woff'),
+         url('../fonts/MonospaceTypewriter/MonospaceTypewriter-webfont.ttf') format('truetype'),
+         url('../fonts/MonospaceTypewriter/MonospaceTypewriter-webfont.svg#MonospaceTypewriterRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* -----------------------------------------
+   Typography
+----------------------------------------- */
+
+h1 {
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+h1 a, h3 a {
+  font-family: "Arial Black", Arial, sans-serif;
+  color: #09021d;
+  font-size: 14px;
+  line-height: 1;
+}
+
+h2, h2 a, h3, h3 a {
+  font-family: "American Typewriter", MonospaceTypewriterRegular, monospace;
+  font-size: 18px;
+  color: #09021d;
+  font-weight: 400;
+}
+
+h2, h2 a {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+h5 {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 12px;
+}
+
+h1,h2,h3,h4,h5,h6 {font-weight:200;}
+
+.site-title .subheader {margin-bottom:0;}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: .95em;
+  line-height: 1.3em;
+  /*text-indent: 1.5em; */
+  text-align: justify;
+  margin-bottom: .7em;
+}
+
+/*p:first-child:first-letter { float: left; color: #903; font-size: 75px; line-height: 60px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: Georgia; }*/
+
+.dropcap{
+    float:left;
+    font-size:450%;
+    color:#09021d;
+    margin: 18px 5px 14px 0;
+}
+
+a {
+  color: #09021d;
+}
+
+a:hover {
+  color: #012C52;
+}
+
+img, a img {
+  padding: 2px;
+  border: 1px solid #09021d;
+}
+
+time, figcaption, h6 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 10px;
+  font-style: italic;
+  color: #888888;
+}
+
+figure {
+  margin-bottom: 1em;
+}
+
+a.read-more {
+  color: #cc0000;
+}
+

@@ -1,0 +1,104 @@
+/*MODULES*/
+
+
+/*NAV*/
+
+
+nav.top-bar{
+  overflow: hidden;
+  width: 100%;
+}
+
+.top-bar li {
+  width: 10%;
+  float: left;
+}
+
+section.nav-container {
+  width: 1040px;
+  margin: 0 auto;
+}
+
+ul#menu-main-navigation {
+  width: 1040px;
+  display: block;
+  background: none;
+  margin: 0 auto;
+}
+
+.top-bar-section ul li>a, .top-bar-section li a:not(.button) {
+  background: none;
+}
+
+.top-bar-section ul li>a {
+  font-family: "American Typewriter", MonospaceTypewriterRegular, monospace;
+  font-size: 16px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.nav-bar>li>a:first-child {
+  font-family: "American Typewriter", MonospaceTypewriterRegular, monospace;
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.top-bar-section ul li:first-child > a {
+  border-left: 0px;
+}
+
+article {
+  padding: 0 10px;
+}
+
+
+/* Ticker Styling */
+
+/* -- JQUERY NEWS TICKER -- */
+
+section#news-ticker-box {
+  width: 100%;
+  overflow: hidden;
+}
+
+h3.news-box-latest {
+  float: left;
+  width: 22%;
+  color: #fff;
+  text-align: center;
+  background: red;
+  padding: 5px 10px;
+  margin-right: 2%;
+  border: 1px solid #09021d;
+}
+
+.jq-news-ticker {
+    width: 76%;
+    height: 2em;
+    overflow: hidden;
+    float: right;
+    padding: 5px 10px;
+    background-color: #fff;
+    box-shadow: inset 0px 0px .25em rgba(0, 0, 0, .3);
+    border: 1px solid #09021d;
+    border-radius: 5px;
+}
+    .jq-news-ticker .jq-news-ticker-items {
+        display: block;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+    }
+    .jq-news-ticker .jq-news-ticker-item {
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        left: 0;
+        position: absolute;
+        white-space: nowrap;
+        line-height: 1em;
+    }
+    .jq-news-ticker .jq-news-ticker-item-focus {}
