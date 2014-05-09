@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 _s
 ===
 
@@ -42,3 +43,9 @@ Then, update the stylesheet header in style.css and the links in footer.php with
 Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
 
 Good luck!
+=======
+uc-history
+==========
+
+WP theme for Uranium City History website, built on underscores.me
+>>>>>>> f692f5701c81f3950dd346db44b7eb254ee73d75
