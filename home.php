@@ -1,13 +1,7 @@
 <?php get_header(); ?>
 
-    <!-- Top Content -->
-    <section id="top-content" role="content">
-
-
-
-
     <!--Featured Image-->
-			<article id="feature-slider" class="feature-content">
+			<section id="feature-slider" class="feature-content">
 
     <!--+++++++++++++++++++++++++++++News Ticker+++++++++++++++++++++++++-->
 
@@ -49,7 +43,10 @@
 
 </div><!--end flexslider-->
 
-            </article>
+            </section><!--end slider-box-->
+
+        <!-- Top Content -->
+<section id="main-content" role="content">
 
     <!--++++++++++++++++Latest Post++++++++++++++++++-->
     <?php   $args = array( 'post_type' => 'news', 'item-type' => 'latest', 'posts_per_page' => 1 );
@@ -59,7 +56,7 @@
             <article id="latest-posts" class="feature-content">
 
                 <header>
-                    <h2 class="latest-title"><a href="">News</a></h2>
+                    <h1 class="latest-title"><a href="">News</a></h1>
                     <h3 class="latest-post"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     <time>April 17, 2013</time>
                 </header>
@@ -75,7 +72,7 @@
                 </div>
             </article>
     <?php endwhile; ?>
-    </section><!--end .top-content-->
+
 
     <div id="bottom-container">
         <!--First Row Bottom-->
@@ -178,7 +175,7 @@
             </section><!--.top-boxes-->
 
         <!--Bottom Three Boxes-->
-            <section class="bottom-boxes large-12 columns">
+            <section class="bottom-boxes">
 
             <!--++++++++++VIDEOS+++++++++++-->
                 <?php   $args = array( 'post_type' => 'video', 'posts_per_page' => 1 );
@@ -291,12 +288,11 @@
                     </div>
                 </article>
             <?php endwhile; ?>
-            </section><!--end .bottom-boxes-->
-    	</section><!--end .bottom-content-->
-
-        <?php get_sidebar('home'); ?>
 
     </div><!--end .bottom-container-->
     <!-- End Bottom Content -->
+</section><!--end .main-content-->
+
+    <?php get_sidebar('home'); ?>
 
 <?php get_footer('home'); ?>

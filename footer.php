@@ -10,14 +10,15 @@
  */
 ?>
 
-<?php get_footer('inside-carousel'); ?>
+<?php include('footer-home-carousel.php'); ?>
 
 </div>
-<!-- End container -->
+<!-- End Page -->
 
 <!-- Footer -->
-<footer id="main-footer" class="group">
+<footer id="main-footer">
 
+<div class="large-12 columns">
 
 	<ul>
 		<ul class="uc-links">
@@ -33,7 +34,7 @@
 			<h5>Contact</h5>
 		</ul>
 	</ul>
-
+</div>
 
 </footer>
 <!-- End Footer -->

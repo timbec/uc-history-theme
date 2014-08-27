@@ -1,0 +1,105 @@
+/*--------------------------------------------------------------
+5.2 Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	clear: both;
+	display: block;
+	width: 100%;
+	@include gradient_red(); 
+}
+
+.menu-main-navigation-container {
+	text-align: center; 
+	max-width: 1040px; 
+	margin: 0 auto;
+}
+
+.main-navigation ul {
+	list-style: none;
+	@include gradient_red(); 
+}
+
+.main-navigation .menu > li {
+	float: left;
+	position: relative;
+	padding: 12px 0; 
+	margin-right: 2em; 
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+	font-size: 1.3rem; 
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	display: none;
+	float: left;
+	position: absolute;
+	top: 2.8em;
+	left: -3em;
+	z-index: 99999;
+	margin-left: 0; 
+}
+
+.main-navigation ul ul ul {
+	left: 100%;
+	top: 0;
+}
+
+.main-navigation ul ul a {
+	width: 160px;
+	font-size: 1.2rem;
+	text-align: left;  
+	padding: 12px; 
+}
+
+.main-navigation ul ul li {
+}
+.main-navigation li:hover > a {
+}
+.main-navigation ul ul :hover > a {
+}
+.main-navigation ul ul a:hover {
+}
+.main-navigation ul li:hover > ul {
+	display: block;
+}
+.main-navigation .current_page_item a,
+.main-navigation .current-menu-item a {
+}
+/* Small menu */
+.menu-toggle {
+	cursor: pointer;
+	display: none;
+}
+@media screen and (max-width: 600px) {
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+	}
+
+	.main-navigation ul {
+		display: none;
+	}
+}
+.site-main .comment-navigation,
+.site-main .paging-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+.comment-navigation .nav-previous,
+.paging-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+.comment-navigation .nav-next,
+.paging-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}

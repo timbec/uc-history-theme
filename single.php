@@ -12,7 +12,7 @@
 get_header(); ?>
 
     <!-- Main Content -->
-    <div class="single-content role="main">
+    <div class="single-content" role="main">
 
 		<?php if ( have_posts() ) : ?>
 

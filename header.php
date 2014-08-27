@@ -42,20 +42,23 @@
             </nav>
 
             <div id="minehead-image"></div>
-            <hgroup class="title-block">
+            <div class="title-block">
                 <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
             <h3 class="subheader"><?php bloginfo('description'); ?></h3>
             <h4 class="tagline">"Helping Keep Uranium City alive on the web"</h4>
-            </hgroup><!--end .title-block-->
+            </div><!--end .title-block-->
 
             <div id="atomic-symbol"></div>
 
 
 	</header>
 
-        <nav class="top-bar">
-            <?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_class' => 'center') ); ?>
-        </nav>
+                <nav id="site-navigation" class="main-navigation group" role="navigation">
+            <h1 class="menu-toggle"><?php _e( 'Menu', 'underscores' ); ?></h1>
+            <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'underscores' ); ?></a>
+
+            <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+        </nav><!-- #site-navigation -->
 
 
 <!-- Begin Page -->

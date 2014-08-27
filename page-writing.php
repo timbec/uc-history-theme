@@ -1,42 +1,45 @@
 <?php
 /**
-*Template Name: Writing Archive Page
+*Template Name: News Archive Page
  */
 
 get_header(); ?>
 
-<header>
-	<h1>Writing</h1>
-</header>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-       <!-- Main Content -->
-    <div id="writing" class="archive-content" role="main">
+	<header>
+	<h1>Writing</h1>
+	</header>
 
 	<?php	$args = array( 'post_type' => 'writing', 'posts_per_page' => 10 );
-$writing_loop = new WP_Query( $args );
-while ( $writing_loop->have_posts() ) : $writing_loop->the_post(); ?>
+$loop = new WP_Query( $args );
+while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
 
 	<div class="entry-content">
 
 		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+
 		<!--featured image-->
-
-	<div class="archive-thumbnail">
+	<div class="archive-image">
 		<?php if (has_post_thumbnail()) { ?>
-		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+		<?php the_post_thumbnail('photo-archive'); ?>
 		<?php } else { ?>
-
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/newspaper-image.jpg" />
 		<?php } ?>
 	</div>
 
-	<div class="archive-text">
-		<?php the_excerpt(); ?>
-	</div>
+			<div class="archive-text">
+				<?php the_excerpt(); ?>
+			</div>
 
-		</div>
+		</div><!--end .entry-text-->
 	<?php endwhile; ?>
-	    </div>
-    <!-- End Main Content -->
+
+	   	</main><!-- Main -->
+   	</div><!--end primary-->
 
 <?php get_sidebar(); ?>
+    
 <?php get_footer(); ?>

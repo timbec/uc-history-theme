@@ -31,6 +31,35 @@ $(document).ready(function() {
   				easing: 'ease-in-out'
 			});
 
+  //Memorabilia
+
+$('.isotope').find('div').addClass('item'); 
+
+
+$container = jQuery('.item');
+
+//getUnitWidth($container);
+
+// with vanilla JS
+var iso = new Isotope( '.isotope', {
+  itemSelector: '.item',
+  // getSortData: {
+  //   name: '.name',
+  //   category: '[data-category]'
+  //},
+  masonry: {
+    columnWidth: 320
+  }
+});
+
+console.log($container);
+
+  $('.item').find('a').magnificPopup({
+    type:'image', 
+    gallery: {
+      enabled: true
+    }
+  });
 });
 
 /*************************
@@ -75,73 +104,6 @@ $(function(){
         })
       });
 
-//Fade in titles over images
+(function() {
 
-/*$('li.gallery-images').hover(
-    function(){
-      $(this).find('.wp-caption-text').animate({bottom:"3%"}, 400);
-    },
-    function(){
-      $(this).find('.wp-caption-text').animate({bottom:"-15%"}, 500);
-    }
-  );*/
-
-//Calls Isotope
-
-/*$('li.gallery-images').isotope({
-    itemSelector: '.wp-caption',
-    animationEngine: 'best-available',
-     animationOptions: {
-     duration: 750,
-     easing: 'linear',
-     queue: false
-   },
-     masonryHorizontal: {
-    rowHeight: 360
-  }
-});*/
-
-//Calls Masonry
-
-/*var $container = $( 'ul#gallery' );
-
-$container.imagesLoaded(function(){
-  $container.masonry({
-    itemSelector : 'p.item',
-    isFitWidth: true,
-     // set columnWidth a fraction of the container width
-  columnWidth: function( containerWidth ) {
-    return containerWidth / 12;
-  },
-    isAnimated: true,
-      animationOptions: {
-    duration: 750,
-    easing: 'linear',
-    queue: false
-  }
-  });
-});*/
-
-/*************************
-**   =ToolTip
-***************************/
- /*$("img").tooltip({
-      items: "img",
-              content: function() {
-                return $(this).attr("alt");
-              }
-    });*/
-
-
-/*(function(window, $, PhotoSwipe){
-
-      $(document).ready(function(){
-
-        var options = {};
-
-        $("#gallery p a").photoSwipe(options);
-
-      });
-
-
-    }(window, window.jQuery, window.Code.PhotoSwipe));*/
+})(); 

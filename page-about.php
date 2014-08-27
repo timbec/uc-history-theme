@@ -5,8 +5,8 @@
 
 get_header(); ?>
 
-     <!-- Main Content -->
-    <div class="large-9 columns" role="main">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -28,8 +28,8 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-    </div>
-    <!-- End Main Content -->
+   		</main><!-- Main -->
+   	</div><!--end primary-->
 
 <?php get_sidebar('about'); ?>
 <?php get_footer(); ?>

@@ -5,11 +5,12 @@
 
 get_header(); ?>
 
-<header>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+	<header>
 	<h1>News</h1>
-</header>
-    <!-- Main Content -->
-    <div id ="news" class="archive-content" role="main">
+	</header>
 
 	<?php	$args = array( 'post_type' => 'news', 'posts_per_page' => 10 );
 $loop = new WP_Query( $args );
@@ -35,8 +36,10 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 		</div><!--end .entry-text-->
 	<?php endwhile; ?>
-	    </div>
-    <!-- End Main Content -->
+
+	   	</main><!-- Main -->
+   	</div><!--end primary-->
 
 <?php get_sidebar(); ?>
+    
 <?php get_footer(); ?>

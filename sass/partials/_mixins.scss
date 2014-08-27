@@ -1,3 +1,26 @@
 /*Mixins*/
 
+@mixin Cumberland() {
+	font-family: a_love_of_thunderregular;
+}
 
+@mixin americanTypewriter() {
+    font-family: "American Typewriter", MonospaceTypewriterRegular, sans-serif; 
+}
+
+@mixin arialBlack {
+	font-family: "Arial Black", Arial, sans-serif; 
+}
+
+@mixin gradient_red() {
+background: #c01313; /* Old browsers */
+background: -moz-linear-gradient(top,  #c01313 0%, #c01313 70%, #09021d 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c01313), color-stop(70%,#c01313), color-stop(100%,#09021d)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #c01313 0%,#c01313 70%,#09021d 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #c01313 0%,#c01313 70%,#09021d 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #c01313 0%,#c01313 70%,#09021d 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #c01313 0%,#c01313 70%,#09021d 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c01313', endColorstr='#09021d',GradientType=0 ); /* IE6-9 */
+  margin-top: 0px; 
+  box-shadow: 0 2px 2px #09021d; 
+}

@@ -37,14 +37,18 @@ body:after {
   max-width:1040px;
   background: rgba(255,255,255, 1);
   position: relative;
-  padding: 0.875em .5em;
+  @include clearfix; 
   margin: 0 auto;
-  margin-top: 48px;
 }
 
 .container, header#main-header, footer#main-footer {
   -webkit-box-shadow: 1px 1px 2px 2px #ccc;
   box-shadow: 1px 1px 2px 2px #ccc;
+}
+
+#main-container {
+  width: 100%; 
+  overflow: hidden; 
 }
 
 button.secondary, .button.secondary {
@@ -63,10 +67,10 @@ button.secondary:hover, .button.secondary:hover {
 /*HEADER*/
 
 header#main-header {
-  width: 1040px;
+  max-width: 1040px;
   background: #fff;
   opacity: 1;
-  overflow:hidden;
+  @include clearfix; 
   margin: 0 auto;
 }
 
@@ -76,10 +80,11 @@ header#main-header {
   height: 170px;
   width: 18%;
   float: left;
+  margin-top: 40px; 
   margin-left: 25px;
 }
 
-hgroup.title-block {
+.title-block {
   width: 64%;
   float: left;
   margin-top: 10px;
@@ -94,45 +99,12 @@ hgroup.title-block {
   padding-right: 0;
 }
 
-hgroup h1 {
-  margin-bottom: 2px;
-}
-
-hgroup h1 a, hgroup h3.subheader {
-  font-family: 'a_love_of_thunderregular', sans-serif;
-  color: #09021d;
-}
-
-hgroup h1 a {
-  font-size: 48px;
-}
-
-hgroup h1 a:hover {
-  color: #333;
-}
-
-hgroup h3.subheader {
-  font-size: 24px;
-  line-height: 1;
-  margin-top: 2px;
-  margin-left: 70px;
-}
-
-hgroup h4 {
-  font-size: 18px;
-  font-style: italic;
-  font-weight: bold;
-  font-family: "Arial Narow", "Arial Light", Arial, sans-serif;
-  margin-top: 30px;
-  margin-left: 85px;
-}
-
 nav.search-bar{
-  width: 100%;
+  width: 50%;
   float: right;
   /*background: #ccc; */
   height: 35px;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 nav.search-bar form {
@@ -200,43 +172,57 @@ nav.search-form .only-search + #access div {
 
 /*Top Section*/
 
-section#top-content {
-  float: left;
-  padding-bottom: 5px;
-}
-
-.marquee {
-  width: 450px;
+section#main-content {
   overflow: hidden;
-  padding: 9px 2px 10px 2px;
-  margin-top: 3px;
-  border:1px solid #ccc;
+  width: 64%;
+  float: left;  
+  padding: 5px 15px;
 }
 
-.marquee-item {
-  padding-right: 100px;
+#feature-slider {
+  width: 100%;
+  padding: 0; 
 }
 
-article#feature-slider {
-  width: 66.6666%;
-  margin-top: 5px;
-}
-
-article#feature-slider img {
+#feature-slider img {
   width: 100%;
 }
 
-article#latest-posts {
-  width: 33.3333%;
+#main-content header h1 {
+  background: #09021d;
+  padding: 5px 8px;
+  font-size: 16px;
+  color: #fff;
+  a {
+  color: #fff; 
+  }
 }
 
-#latest-posts h2, #latest-posts h3 {
-  margin-top: 0px;
-  margin-bottom: 0px;
+#latest-posts {
+  width: 100%;
+  figure {
+  width: 45%; 
+  float: left; 
+  }
+}
+
+ #latest-posts h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  a {
+  font-size: 1.5em; 
+  }
 }
 
 article#latest-posts h2 a {
   font-size: 18px;
+}
+
+.latest-text {
+  width: 50%; 
+  float: right; 
+  padding: 0 1%; 
+
 }
 
 article.feature-content {
@@ -251,16 +237,9 @@ article.feature-content {
   border-top: 5px solid #ccc;
 }
 
-section.bottom-content {
-  width: 66%;
+.bottom-content {
+  width: 100%;
   float: left;
-}
-
-section.bottom-content header h1 {
-  background: #09021d;
-  padding: 5px 8px;
-  font-size: 16px;
-  color: #fff;
 }
 
 section.bottom-content header h1 a {
@@ -271,15 +250,25 @@ section.bottom-content header h1 a {
 section.top-boxes {
   float: left;
   width: 100%;
-  padding-bottom: 0px;
+  padding-bottom: 10px;
+  margin-top: 10px; 
   margin-bottom: 15px;
   margin-left: 0px;
   border-bottom: 2px solid #ccc;
+  .articles {
+  width: 48%; 
+  float: left; 
+  padding: 0; 
+  margin: 0; 
+  }
+  .articles:first-child {
+  margin-right: 4%; 
+  }
 }
 
-article.articles {
-  width: 50%;
-  float: left;
+.article-title {
+  height: 30px; 
+  margin: 15px 0 10px 0; 
 }
 
 header.article-header {
@@ -294,12 +283,11 @@ h3.article-title {
   width: 96%;
 }
 
-article.bottom-box {
-  width: 32%;
+.bottom-box {
+  width: 31%;
   float: left;
-  padding: 0 10px 0 0;
-  margin-right: 2%;
-  border-right: 1px solid #ccc;
+  padding: 0;
+  margin-right: 3.2%;
 }
 
 article.bottom-box:last-child {
@@ -310,16 +298,27 @@ article.bottom-box:last-child {
 section.bottom-boxes {
   padding-left: 0px !important;
   margin-bottom: 15px;
-}
-
-section.bottom-boxes h1 {
+   h1 {
   font-size: 16px;
   font-weight: 500;
+  }
+  img {
+  width: 98%
+  }
 }
 
+
 /* -----------------------------------------
-   TEMPLATES
+   PAGES
 ----------------------------------------- */
+
+#primary {
+  width: 64%; 
+  float: left; 
+  padding: 0 15px; 
+  margin-top: 40px; 
+  margin-bottom: 50px; 
+}
 
 .archive-content, .single-content {
   width: 66%;
@@ -328,22 +327,23 @@ section.bottom-boxes h1 {
 
 .entry-content {
   float: left;
-}
-
-.entry-content h1 a {
+  h1 {
+  font-family: 'Arial Black', Arial, sans-serif; 
+  }
+  h1 a {
   font-family: "American Typewriter", MonospaceTypewriterRegular, monospace;
   font-size: 24px;
   font-weight: 400;
+  }
 }
 
 .archive-image {
   float: left;
   width: 210px;
-}
-
-.archive-image img {
+  img {
   padding: 2px;
   border: 1px solid #09021d;
+  }
 }
 
 .archive-text {
@@ -356,7 +356,25 @@ section.bottom-boxes h1 {
 }
 
 /* -----------------------------------------
-   PHOTO PAGES
+   SINGLE
+----------------------------------------- */
+
+.single-content {
+  margin-top: 40px; 
+  overflow: hidden; 
+}
+
+.single-content article {
+  padding: 0 25px; 
+  header {
+  width: 100%; 
+  }
+  h2 a {
+  font-size: 1.5em; 
+  }
+}
+/* -----------------------------------------
+   ARCHIVE PAGES
 ----------------------------------------- */
 
 header.archives {
@@ -372,8 +390,7 @@ header.archives {
   height: auto;
   width: 100%;
   padding-bottom: 18px;
-  margin-bottom: 50px;
-  border-bottom: 1px solid #09021d;
+  border-bottom: 1px solid $black;
 }
 
 #gallery-page {
@@ -488,18 +505,45 @@ p.item {
 }
 
 /* -----------------------------------------
+   COMMENT
+----------------------------------------- */
+
+#respond {
+  background: $grey; 
+  width: 90%;
+  float: left;  
+  padding: 15px 25px; 
+  margin-left: 10px; 
+  .form-allowed-tags {
+  display: none; 
+  }
+  text-area {
+  width: 95%; 
+  margin: 0 auto; 
+  }
+  border-radius: 5px; 
+}
+
+/* -----------------------------------------
    SIDEBAR
 ----------------------------------------- */
 
 .home-sidebar {
-  width: 33%;
+  width: 30%;
   float: right;
+  padding-left: 1%; 
+  margin-right: 15px; 
+  border-left: 1px solid $grey; 
+  ul {
+  margin: 0; 
+  padding: 0; 
+  }
 }
 
-aside.sidebar {
-  width: 33%;
-  float: right;
-  margin-top: 30px;
+.sidebar {
+  @extend .home-sidebar; 
+  border-left: none; 
+  margin-top: 50px; 
 }
 
 .inside-box {
@@ -514,7 +558,7 @@ aside.sidebar {
   margin: 10px auto 10px auto;
 }
 
-header.sidebar-header, button {
+.sidebar-header, button {
   height: 35px;
   background: #c01313; /* Old browsers */
 background: -moz-linear-gradient(top,  #c01313 0%, #c01313 70%, #09021d 100%); /* FF3.6+ */
@@ -529,17 +573,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c01313', end
   text-align: center;
   padding-top: 8px;
   margin-bottom: 5px;
-}
-
-button {
-  width: auto;
-}
-
-header.sidebar-header h1 {
+  h1 {
   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
   font-weight: 100;
   font-size: 18px;
   line-height: .8;
+}
+
+}
+
+button {
+  width: auto;
 }
 
 header.sidebar-header h1 a {
@@ -548,12 +592,9 @@ header.sidebar-header h1 a {
   line-height: 80%;
 }
 
-figure.about-uc a img {
-  width: 100%;
-}
-
 .home-sidebar figure img {
   text-align: center;
+  max-width: 98%; 
   padding: 2px;
   border: 1px solid #09021d;
 }
@@ -573,23 +614,28 @@ aside.sidebar h5 {
   padding: 5px 10px;
 }
 
-li.recent-posts {
+.recent-posts {
   overflow: hidden;
-}
-
-.recent-posts-thumbnail {
+  margin-bottom: 10px; 
+  .recent-posts-thumbnail {
   float: left;
-  width: 40%;
-}
-
-.recent-posts-title {
+  width: 35%;
+  }
+  .recent-posts-title {
   float: right;
   width: 60%;
-  padding-left: 10px;
+  padding-left: 2%;
+  }
 }
 
 aside.sidebar h4, aside.home-sidebar h4 {
-  font-size: em;
+  font-size: 1em;
+  padding: 0; 
+  margin: 0; 
+  a {
+  margin: 0; 
+  padding: 0; 
+  }
 }
 
 /* -----------------------------------------
@@ -597,6 +643,7 @@ aside.sidebar h4, aside.home-sidebar h4 {
 ----------------------------------------- */
 
 section#inside-carousel {
+  overflow: hidden; 
   border: 1px solid #09021d;
 }
 

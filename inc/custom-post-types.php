@@ -205,35 +205,35 @@ function uc_photos_init()
 
 //Galleries
 
-add_action('init', 'uc_galleries_init');
+add_action('init', 'uc_memorabilia_init');
 
-function uc_galleries_init()
+function uc_memorabilia_init()
 
 {
 
 	$uc_labels = array(
 
-		'name' => _x('Galleries', 'post type general name'),
+		'name' => _x('Memorabilia', 'post type general name'),
 
-		'singular_name' => _x('Galleries', 'post type singular name'),
+		'singular_name' => _x('Memorabilia', 'post type singular name'),
 
-		'all_items' => __('All Galleries'),
+		'all_items' => __('All Memorabilia'),
 
-		'add_new' => _x('Add Galleries', 'Galleries'),
+		'add_new' => _x('Add Memorabilia', 'Memorabilia'),
 
-		'add_new_item' => __('Add Galleries'),
+		'add_new_item' => __('Add Memorabilia'),
 
-		'edit_item' => __('Edit Galleries'),
+		'edit_item' => __('Edit Memorabilia'),
 
-		'new_item' => __('New Galleries'),
+		'new_item' => __('New Memorabilia'),
 
-		'view_item' => __('View Galleries'),
+		'view_item' => __('View Memorabilia'),
 
-		'search_items' => __('Search in Galleries'),
+		'search_items' => __('Search in Memorabilia'),
 
-		'not_found' =>  __('No Galleries found'),
+		'not_found' =>  __('No Memorabilia found'),
 
-		'not_found_in_trash' => __('No Galleries found in trash'),
+		'not_found_in_trash' => __('No Memorabilia found in trash'),
 
 		'parent_item_colon' => ''
 
@@ -252,7 +252,7 @@ function uc_galleries_init()
 		'query_var' => true,
 
 		'menu_icon' => get_stylesheet_directory_uri() . '/images/misc/quote-icon.png', /* Get these icons later, see Jeffrey Way course*/
-     // 'rewrite' => array( 'slug' => 'galleries', 'with_front' => false ), /* you can specify it's url slug */
+     // 'rewrite' => array( 'slug' => 'memorabilia', 'with_front' => false ), /* you can specify it's url slug */
 
 		'capability_Show' => 'post',
 
@@ -262,11 +262,11 @@ function uc_galleries_init()
 
 		'has_archive' => 'true',
 
-		'supports' => array('title','editor','excerpt','comments','thumbnail')
+		'supports' => array('title','editor','excerpt','comments','thumbnail', 'post-formats', 'page-attributes')
 
 	);
 
-	register_post_type('galleries',$args);
+	register_post_type('memorabilia',$args);
 
 }
 

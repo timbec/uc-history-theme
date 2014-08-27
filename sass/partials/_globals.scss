@@ -28,6 +28,10 @@ hr {
 p {
 	margin-bottom: 1.5em;
 }
+
+a {
+	color: $red; 
+}
 ul, ol {
 	margin: 0 0 1.5em 3em;
 }
@@ -130,7 +134,11 @@ input {
 	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
 }
 button,
-html input[type="button"],
+html input[type="button"] {
+	background: $black; 
+}
+
+
 input[type="reset"],
 input[type="submit"] {
 	border: 1px solid #ccc;
