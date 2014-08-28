@@ -12,6 +12,10 @@
 	font-family: "Arial Black", Arial, sans-serif; 
 }
 
+@mixin notoSerif {
+	font-family: 'Noto Serif', serif;
+}
+
 @mixin gradient_red() {
 background: #c01313; /* Old browsers */
 background: -moz-linear-gradient(top,  #c01313 0%, #c01313 70%, #09021d 100%); /* FF3.6+ */

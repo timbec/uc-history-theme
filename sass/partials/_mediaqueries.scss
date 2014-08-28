@@ -1,0 +1,353 @@
+/*Media Queries*/
+
+@media screen and (max-width: 800px) {
+	
+}
+
+/* --------------------------------------------------
+  :: MOBILE MEDIA QUERIES - TABLET AND PHONE
+---------------------------------------------------*/
+
+/*+++++++++++++++++++++++++++++++++++++++++++
+  MEDIA QUERIES
+  +++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+/* Responsive videos
+----------------------------------------- */
+
+
+/* Touch styles
+----------------------------------------- */
+
+
+/* Large desktop */
+/*@media (min-width: 1130px) {
+
+
+}*/
+
+/* Small desktop and below */
+/*@media (max-width: 1130px) {
+
+}*/
+
+
+/* small desktop / tablet landscape */
+/*@media (min-width: 1000px) and (max-width: 1130px) {
+
+}*/
+
+
+/* tablet landscape and below */
+@media (max-width: 1000px) {
+
+  header#main-header, footer#main-footer {
+    width: 100%;
+    height: 17em;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  ul#menu-main-navigation {
+    width: auto;
+  }
+
+}
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 800px) {
+
+  nav.search-bar {
+    height: auto;
+    margin-top: 10px; 
+  }
+
+  nav.search-bar form {
+    width: 100%;
+  }
+
+    #minehead-image {
+      display: none;
+    }
+
+    #atomic-symbol {
+      width: auto;
+    }
+
+  .title-block {
+    width: 100%;
+  }
+
+  .ticker-wrapper.has-js {
+    width: 100%;
+  }
+
+  #main-header h1, #main-header h3.subheader, #main-header h4 {
+    text-align: center;
+    margin-left: auto;
+  }
+
+  #main-header h1 {
+    margin-left: 0px;
+  }
+
+   /************************
+	HOME
+	****************************/
+
+	#main-content {
+	width: 98%;
+	padding: auto 1%;  
+	}
+
+	 article#latest-posts header {
+    width: 100% !important;
+   }
+
+   article#latest-posts figure {
+      float: left;
+      width: 50%;
+   }
+
+   article#latest-posts header {
+    text-align: center;
+    margin-bottom: 10px;
+   }
+
+   article#feature-slider {
+    width: 100%;
+    img {
+    width: 100%; 
+    }
+   }
+
+	#latest-posts {
+    width: 96%;
+    float: left;
+    padding: 2%;
+    figure {
+    width: 45%; 
+    }
+    .latest-text {
+    width: 45%;
+    float: right;
+    }
+   }
+
+  .bottom-content {
+      width: 100% !important;
+      /*margin-top: 500px; */
+    }
+
+    /*TEMPLATE PAGES*/
+
+    article {
+      padding: 0 15px;
+      p a img {
+      margin-bottom: 25px;
+      }
+    }
+
+  .photo-thumbnails {
+      width: 100%;
+    }
+
+    .photo-text {
+      width: 100%;
+    }
+
+     .archive-content, .single-content {
+      width: 100%;
+     }
+
+	#respond {
+	width: 100%; 
+	float: left; 
+	}
+
+
+    /*Sidebar*/
+
+    aside.home-sidebar, aside.sidebar {
+      width: 100%;
+      float: left;
+    }
+
+    section.about-uc-history {
+      overflow: hidden;
+      padding: 1% 0;
+    }
+
+    figure.about-uc {
+      width: 48%;
+      float: left;
+    }
+
+    .about-uc-text {
+      width:48%;
+      float: right;
+    }
+
+    /*Cutsom Video*/
+
+    .video-container {
+      width: 100%; 
+      padding: 0.5%;
+      margin: 0 1%;
+    }
+
+    .video-js {
+      max-width: 100%; 
+      height: auto;
+    }
+
+    /*PLACES*/
+
+    #places-content .image-gallery, #places-content .link, #places-content .single-image {
+      width: 100%;
+      float: none;
+    }
+
+    #places-content .pdf {
+      width: 35%;
+      margin-right: 0%;
+    }
+
+    #places-content p {
+      width: 100%; 
+      float: none;
+    }
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 730px) {
+
+  article#latest-posts {
+    padding-top: 10px;
+    margin-top: 1%;
+    border-top: 5px solid #ccc;
+  }
+
+  article#latest-posts header {
+    width: 100%;
+  }
+
+  article#latest-posts figure {
+    float: none;
+  }
+
+  #latest-posts figure img {
+    width: 100%;
+  }
+
+  .latest-text {
+    width: 45%;
+  }
+}
+
+@media (max-width: 660px) {
+
+	nav.search-bar {
+	width: 100%; 
+	}
+
+	.search-bar .search-field {
+	width: 60%; 
+	padding: 8px 4px; 
+	}
+
+	.search-bar .search-submit {
+	padding: 12px 8px; 
+	}
+
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+	}
+
+	.main-navigation ul {
+		display: none;
+	}
+
+	.main-navigation .menu li {
+	width: 100%; 
+	}
+
+	.main-navigation ul ul {
+	width: 100%; 
+	left: 0; 
+	}
+
+	.main-navigation ul ul a {
+	width: 100%; 
+	}
+
+    article.articles, article.bottom-box {
+    width: 100%;
+  }
+
+  .archive-thumbnail {
+    width: 100%;
+  }
+
+  .archive-text {
+    width: 100%;
+  }
+
+  div.photo-text {
+    width: 100%;
+  }
+
+  .gallery {
+    width: 100%;
+  }
+
+  dl.gallery-item {
+    width: 50% !important;
+  }
+
+  .gallery br {
+    clear: none !important;
+  }
+}
+
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+  header#main-header, footer#main-footer {
+    height: 20em;
+  }
+
+  hgroup.title-block {
+    width: 98%;
+    float: none;
+    margin-left: auto;
+  }
+
+
+  article p a img {
+    float: none;
+    margin-right: auto;
+    margin-bottom: 18px;
+  }
+
+  figure.about-uc {
+      width: 100%;
+      float: left;
+    }
+
+    .about-uc-text {
+      width:100%;
+      float: left;
+    }
+
+      #places-content .pdf {
+      width: 50%;
+    }
+}

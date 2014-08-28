@@ -172,7 +172,7 @@ nav.search-form .only-search + #access div {
 
 /*Top Section*/
 
-section#main-content {
+#main-content {
   overflow: hidden;
   width: 64%;
   float: left;  
@@ -280,7 +280,7 @@ h3.article-title {
 }
 
 .article-text {
-  width: 96%;
+  width: 100%;
 }
 
 .bottom-box {
@@ -320,7 +320,7 @@ section.bottom-boxes {
   margin-bottom: 50px; 
 }
 
-.archive-content, .single-content {
+.archive-content {
   width: 66%;
   float: left;
 }
@@ -360,6 +360,8 @@ section.bottom-boxes {
 ----------------------------------------- */
 
 .single-content {
+  width: 66%; 
+  float: left; 
   margin-top: 40px; 
   overflow: hidden; 
 }
@@ -373,6 +375,8 @@ section.bottom-boxes {
   font-size: 1.5em; 
   }
 }
+
+
 /* -----------------------------------------
    ARCHIVE PAGES
 ----------------------------------------- */

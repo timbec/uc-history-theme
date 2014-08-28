@@ -161,7 +161,7 @@ function uc_history_scripts() {
 
 	// wp_enqueue_script( 'uc_history-skip-link-focus-fix', get_template_directory_uri() . '/js/vender/skip-link-focus-fix.js', array(), '20130115', true );
 
-	wp_enqueue_script( 'uc_history-isotope', get_template_directory_uri() . '/js/vendor/isotope.pkgd.js', array(), '20130115', true );
+	wp_enqueue_script( 'uc_history-masonry', get_template_directory_uri() . '/js/vendor/jquery.masonry.js', array(), '20130115', true );
 
 	wp_enqueue_script( 'uc_history-magnific-popup', get_template_directory_uri() . '/js/vendor/jquery.magnific-popup.min.js', array(), '20130115', true );
 

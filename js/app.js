@@ -33,34 +33,71 @@ $(document).ready(function() {
 
   //Memorabilia
 
-$('.isotope').find('div').addClass('item'); 
+$('.gallery').find('dt').addClass('item'); 
 
 
-$container = jQuery('.item');
+//$container = jQuery('.item');
 
 //getUnitWidth($container);
 
 // with vanilla JS
-var iso = new Isotope( '.isotope', {
-  itemSelector: '.item',
-  // getSortData: {
-  //   name: '.name',
-  //   category: '[data-category]'
-  //},
-  masonry: {
-    columnWidth: 320
-  }
-});
+// var iso = new Isotope( '.isotope', {
+//   itemSelector: '.item',
+//   // getSortData: {
+//   //   name: '.name',
+//   //   category: '[data-category]'
+//   //},
+//   masonry: {
+//     columnWidth: 320
+//   }
+// });
 
-console.log($container);
+// console.log($container);
 
-  $('.item').find('a').magnificPopup({
-    type:'image', 
+    var $container = $('.isotope');
+    // initialize
+    $container.masonry({
+      columnWidth: 225,
+      itemSelector: '.item'
+    });
+
+      // $('.item').find('a').magnificPopup({
+      //   type:'image', 
+      //   gallery: {
+      //     enabled: true
+      //   }
+      // });
+
+
+  $('.item').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
     gallery: {
-      enabled: true
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function(item) {
+        return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+      }
     }
   });
-});
+
+  $('.popup-youtube').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
+  });
+
+ });
 
 /*************************
 **   =Marquee News Ticker
