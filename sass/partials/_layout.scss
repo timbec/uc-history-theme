@@ -678,8 +678,13 @@ footer#main-footer {
   background: #09021d;
   color: #fff;
   overflow:hidden;
-  padding: 15px 25px;
   margin: 0 auto;
+}
+
+.footer-links {
+  width: 98%; 
+  overflow: hidden; 
+  margin: 0 auto; 
 }
 
 footer ul ul {

@@ -18,7 +18,7 @@
 <!-- Footer -->
 <footer id="main-footer">
 
-<div class="large-12 columns">
+<div class="footer-links">
 
 	<ul>
 		<ul class="uc-links">

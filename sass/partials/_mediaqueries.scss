@@ -80,11 +80,35 @@
 
   .title-block {
     width: 100%;
+    margin-left: auto; 
   }
 
-  .ticker-wrapper.has-js {
-    width: 100%;
-  }
+  .menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+	}
+
+	.main-navigation {
+	color: #fff; 
+	padding: 20px 0; 
+	}
+
+	.main-navigation ul {
+		display: none;
+	}
+
+	.main-navigation .menu li {
+	width: 100%; 
+	}
+
+	.main-navigation ul ul {
+	width: 100%; 
+	left: 0; 
+	}
+
+	.main-navigation ul ul a {
+	width: 100%; 
+	}
 
   #main-header h1, #main-header h3.subheader, #main-header h4 {
     text-align: center;
@@ -99,16 +123,39 @@
 	HOME
 	****************************/
 
-	#main-content {
-	width: 98%;
-	padding: auto 1%;  
+	.marquee {
+	width: 70%; 
 	}
 
-	 article#latest-posts header {
+	section#main-content {
+	width: 97%;
+	padding: 1.5%;  
+	}
+
+	article#feature-slider {
+    width: 100%;
+    img {
+    width: 100%; 
+    }
+   }
+
+	#latest-posts {
+    width: 94%;
+    float: left;
+    padding: 2%;
+    figure {
+    width: 45%; 
+    }
+
+	#bottom-container {
+	width: 98%; 
+	}
+
+	#latest-posts header {
     width: 100% !important;
    }
 
-   article#latest-posts figure {
+   #latest-posts figure {
       float: left;
       width: 50%;
    }
@@ -118,20 +165,6 @@
     margin-bottom: 10px;
    }
 
-   article#feature-slider {
-    width: 100%;
-    img {
-    width: 100%; 
-    }
-   }
-
-	#latest-posts {
-    width: 96%;
-    float: left;
-    padding: 2%;
-    figure {
-    width: 45%; 
-    }
     .latest-text {
     width: 45%;
     float: right;
@@ -139,11 +172,17 @@
    }
 
   .bottom-content {
-      width: 100% !important;
-      /*margin-top: 500px; */
+      width: 98%;
     }
 
-    /*TEMPLATE PAGES*/
+    /******************************
+    INNER PAGES
+    ***************************************/
+
+    #primary {
+    width: 97%; 
+    padding: 1% 1.5%; 
+    }
 
     article {
       padding: 0 15px;
@@ -165,15 +204,17 @@
      }
 
 	#respond {
-	width: 100%; 
+	width: 97%; 
 	float: left; 
+	padding: 1% 1.5%; 
+	margin-left: 0; 
 	}
 
 
     /*Sidebar*/
 
     aside.home-sidebar, aside.sidebar {
-      width: 100%;
+      width: 96%;
       float: left;
     }
 
@@ -192,7 +233,7 @@
       float: right;
     }
 
-    /*Cutsom Video*/
+    /*Custom Video*/
 
     .video-container {
       width: 100%; 
@@ -222,6 +263,21 @@
       float: none;
     }
 
+    footer#main-footer {
+    width: 95%; 
+    padding: 15px 2.5%; 
+    }
+
+    .footer-links ul {
+    padding: 0; 
+    margin: 0; 
+    float: left; 
+    }
+
+    .footer-links > ul {
+    width: 100%; 
+    }
+
 }
 
 /* Landscape phone to portrait tablet */
@@ -237,17 +293,6 @@
     width: 100%;
   }
 
-  article#latest-posts figure {
-    float: none;
-  }
-
-  #latest-posts figure img {
-    width: 100%;
-  }
-
-  .latest-text {
-    width: 45%;
-  }
 }
 
 @media (max-width: 660px) {
@@ -263,28 +308,6 @@
 
 	.search-bar .search-submit {
 	padding: 12px 8px; 
-	}
-
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-		display: block;
-	}
-
-	.main-navigation ul {
-		display: none;
-	}
-
-	.main-navigation .menu li {
-	width: 100%; 
-	}
-
-	.main-navigation ul ul {
-	width: 100%; 
-	left: 0; 
-	}
-
-	.main-navigation ul ul a {
-	width: 100%; 
 	}
 
     article.articles, article.bottom-box {
