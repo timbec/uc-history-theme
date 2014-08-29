@@ -50,14 +50,20 @@
 
             <div id="atomic-symbol"></div>
 
-
+            <div class="block">
+                <a class="nav-btn" id="nav-open-btn" href="#nav">Book Navigation</a>
+            </div>
 	</header>
 
                 <nav id="site-navigation" class="main-navigation group" role="navigation">
             <h1 class="menu-toggle"><?php _e( 'Menu', 'underscores' ); ?></h1>
+            
+            <div class="block">
             <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'underscores' ); ?></a>
 
             <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+            <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
+            </div>
         </nav><!-- #site-navigation -->
 
 
