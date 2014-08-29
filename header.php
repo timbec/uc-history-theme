@@ -35,6 +35,9 @@
 
 <body <?php body_class(); ?>>
 
+    <div id="outer-wrap">
+    <div id="inner-wrap">
+
 
 	<header id="main-header">
             <nav class="search-bar">
@@ -55,7 +58,7 @@
             </div>
 	</header>
 
-                <nav id="site-navigation" class="main-navigation group" role="navigation">
+                <nav id="nav" class="main-navigation group" role="navigation">
             <h1 class="menu-toggle"><?php _e( 'Menu', 'underscores' ); ?></h1>
             
             <div class="block">
