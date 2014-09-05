@@ -403,6 +403,73 @@ function uc_video_init()
 
 }
 
+
+//Places
+add_action('init', 'uc_places_init');
+
+function uc_places_init()
+
+{
+
+	$uc_labels = array(
+
+		'name' => _x('Places', 'post type general name'),
+
+		'singular_name' => _x('Place', 'post type singular name'),
+
+		'all_items' => __('All Places'),
+
+		'add_new' => _x('Add Place', 'Place'),
+
+		'add_new_item' => __('Add Place'),
+
+		'edit_item' => __('Edit Place'),
+
+		'new_item' => __('New Place'),
+
+		'view_item' => __('View Place'),
+
+		'search_items' => __('Search in Places'),
+
+		'not_found' =>  __('No Place found'),
+
+		'not_found_in_trash' => __('No Place found in trash'),
+
+		'parent_item_colon' => ''
+
+	);
+
+	$args = array(
+
+		'labels' => $uc_labels,
+
+		'public' => true,
+
+		'publicly_queryable' => true,
+
+		'show_ui' => true,
+
+		'query_var' => true,
+
+		'menu_icon' => get_stylesheet_directory_uri() . '/images/misc/quote-icon.png', /* Get these icons later, see Jeffrey Way course*/
+     // 'rewrite' => array( 'slug' => 'news', 'with_front' => false ), /* you can specify it's url slug */
+
+		'capability_Show' => 'post',
+
+		'hierarchical' => false,
+
+		'menu_position' => 4,
+
+		'has_archive' => 'true',
+
+		'supports' => array('title','editor','excerpt','comments','thumbnail','post-formats')
+
+	);
+
+	register_post_type('places',$args);
+
+}
+
 /*++++++++++++++++++++++++++++++++
 	TAXONOMIES
 	++++++++++++++++++++++++++++++++++*/

@@ -23,6 +23,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom.modernizr.js"></script>
 
 <!-- Set the viewport width to device width for mobile -->
 <meta name="viewport" content="width=device-width" />
@@ -34,6 +35,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+    <div id="outer-wrap">
+    <div id="inner-wrap">
 
 
 	<header id="main-header">
@@ -52,7 +56,11 @@
 
 	</header>
 
+<<<<<<< HEAD
         <nav id="site-navigation" class="main-navigation group" role="navigation">
+=======
+                <nav id="nav" class="main-navigation group" role="navigation">
+>>>>>>> off-canvas
             <h1 class="menu-toggle"><?php _e( 'Menu', 'underscores' ); ?></h1>
             
             <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'underscores' ); ?></a>

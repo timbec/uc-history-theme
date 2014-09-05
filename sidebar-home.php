@@ -15,7 +15,7 @@
 		</header>
 
 		<figure class="about-uc">
-			<img src="<?php bloginfo('template_directory'); ?>/images/Sign-to-UC.png" />
+			<img src="<?php bloginfo('template_directory'); ?>/css/images/Sign-to-UC.png" />
 			<figcaption>Entrance to Uranium City, 1957</figcaption>
 		</figure>
 
