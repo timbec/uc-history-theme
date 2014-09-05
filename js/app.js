@@ -35,38 +35,12 @@ $(document).ready(function() {
 
 $('.gallery').find('dt').addClass('item'); 
 
-
-//$container = jQuery('.item');
-
-//getUnitWidth($container);
-
-// with vanilla JS
-// var iso = new Isotope( '.isotope', {
-//   itemSelector: '.item',
-//   // getSortData: {
-//   //   name: '.name',
-//   //   category: '[data-category]'
-//   //},
-//   masonry: {
-//     columnWidth: 320
-//   }
-// });
-
-// console.log($container);
-
     var $container = $('.isotope');
     // initialize
     $container.masonry({
       columnWidth: 225,
       itemSelector: '.item'
     });
-
-      // $('.item').find('a').magnificPopup({
-      //   type:'image', 
-      //   gallery: {
-      //     enabled: true
-      //   }
-      // });
 
 
   $('.item').magnificPopup({
@@ -97,7 +71,23 @@ $('.gallery').find('dt').addClass('item');
     fixedContentPos: false
   });
 
- });
+$(window).bind('scroll', function(e) {
+    parallax();
+  });
+
+});
+
+function parallax() {
+  var scrollPosition = $(window).scrollTop();
+  $('#places-header')
+    .css('top', (10 + (scrollPosition * .45)) + 'px')
+    .css('opacity', (1 - (scrollPosition * .001)));
+
+  //$('.scroll').css('top', (-400 + (scrollPosition * .5)) + 'px')
+}
+
+
+
 
 /*************************
 **   =Marquee News Ticker
@@ -139,8 +129,12 @@ $(function(){
         .click(function(e){
           e.preventDefault();
         })
-      });
+});
 
-(function() {
+/**********************
+  FITVIDS
+  ***********************/
 
-})(); 
+$(function(){
+  $(".video-container").fitVids();
+}); 

@@ -16,7 +16,7 @@ body {
 
 body:after {
     content: "";
-    background: url('../images/atomiocbackground.jpg') repeat;
+    background: url('images/atomiocbackground.jpg') repeat;
     opacity: 0.8;
     top: 0;
     left: 0;
@@ -76,7 +76,7 @@ header#main-header {
 
 
 #minehead-image {
-  background: url('../images/headframe.png') top left no-repeat;
+  background: url('images/headframe.png') top left no-repeat;
   height: 170px;
   width: 18%;
   float: left;
@@ -92,7 +92,7 @@ header#main-header {
 }
 
 #atomic-symbol {
-  background: url('../images/atomic-symbol.png') top left no-repeat;
+  background: url('images/atomic-symbol.png') top left no-repeat;
   height: 170px;
   width: 16%;
   float: left;
@@ -556,7 +556,7 @@ p.item {
 }
 
 .uc-pin {
-  background: url('../images/uc-pin.png') top left no-repeat;
+  background: url('images/uc-pin.png') top left no-repeat;
   width: 78px;
   height: 80px;
   margin: 10px auto 10px auto;
@@ -641,6 +641,145 @@ aside.sidebar h4, aside.home-sidebar h4 {
   padding: 0; 
   }
 }
+
+/* -----------------------------------------
+   PLACES
+----------------------------------------- */
+
+.content-container {
+      width: 100%; 
+  overflow: hidden;
+    position: relative;
+}
+
+#single-places-content {
+  width: 100%; 
+  overflow: hidden;
+  position: relative;
+}
+
+#places-header {
+  position: absolute;
+  left: 2%; 
+  top: 3%; 
+}
+
+#places-header h1 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 600;
+  opacity: 1;
+}
+
+.video-container {
+  width: 90%;
+  position: relative;
+  padding: 1%;
+  margin: 0em 5% 2em 6%;
+}
+
+/*
+.video-container .controls {
+  background-color: rgba(255,255,255, 0.6); 
+  position: absolute;
+  bottom: 10px;
+  width: 100%; 
+  height: 40px; 
+  padding: 5px;
+}
+
+.video-container .controls button {
+  background: #09021d;
+  opacity: .6;
+  height: 30px;
+  font-size: .8em;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+#inputSeek {
+  width: 200px; 
+}
+
+#inputVolue {
+  width: 80px;
+}
+*/
+
+.places-main-content {
+  float: left;
+  width: 100%;
+  /*margin-left: 2%;*/
+}
+
+#places-content {
+  width: 98%;
+  float: left;
+  margin: 1em 1% 2em 1%;
+}
+
+#places-content h1 {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 2.4em; 
+  font-weight: 600;
+}
+
+#places-content p {
+  width:66%;
+}
+
+#places-content .pdf {
+  width: 20%; 
+  float: right;
+  margin-left: 1.5%;
+  margin-right: 12%;
+}
+
+#places-content img {
+  border: none !important;
+}
+
+#places-content .wp-credit {
+  font-size: .65em;
+  line-height: 1;
+}
+
+#places-content .image-gallery, #places-content .link, #places-content .single-image {
+  width: 33%;
+  float: right;
+  margin: 0 0% 0 1.5%;
+}
+
+#places-content .image-gallery #gallery-2 img {
+  border: none;
+}
+
+#places-content dl.gallery-item {
+  line-height: 1;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#places-content .gallery {
+  width: 100%;
+}
+
+#places-content p.first-paragraph:first-letter {
+  font-weight: 500;
+  float: left;
+  line-height: .88;
+  font-size: 7em;
+  text-indent: 0;
+  margin-right: 6px;
+}
+
+#places-content p.first-paragraph:first-line {
+  font-variant: small-caps;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 1.2em
+}
+
 
 /* -----------------------------------------
    SUB FOOTER
