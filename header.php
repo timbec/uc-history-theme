@@ -55,19 +55,15 @@
             <div id="atomic-symbol"></div>
 
 	</header>
-
-<<<<<<< HEAD
-        <nav id="site-navigation" class="main-navigation group" role="navigation">
-=======
                 <nav id="nav" class="main-navigation group" role="navigation">
->>>>>>> off-canvas
+
             <h1 class="menu-toggle"><?php _e( 'Menu', 'underscores' ); ?></h1>
             
             <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'underscores' ); ?></a>
 
             <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 
-        </nav><!-- #site-navigation -->
+                </nav><!-- #site-navigation -->
 
 
 <!-- Begin Page -->
