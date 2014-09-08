@@ -71,6 +71,7 @@ header#main-header {
   background: #fff;
   opacity: 1;
   @include clearfix; 
+  position: relative; 
   margin: 0 auto;
 }
 
@@ -368,6 +369,7 @@ section.bottom-boxes {
 
 .single-content article {
   padding: 0 25px; 
+  @include clearfix(); 
   header {
   width: 100%; 
   }
@@ -448,6 +450,10 @@ li.gallery-images:hover div > p.wp-caption-text {
   float: right;
 }
 
+/* -----------------------------------------
+   PHOTO PAGES
+----------------------------------------- */
+
 #photo-gallery {
   width: 100%;
   background: #fff;
@@ -458,27 +464,23 @@ article.photo-thumbnails {
   float: left;
 }
 
-.gallery {
-  float: right;
-  width: 66%;
-}
-
 article.wall-thumbnails {
   height: 80%;
-}
-
-#photo-wall article.photo-thumbnail .photo-gallery {
-  width: 100%;
 }
 
 .wall-thumbnail {
   width: 100%;
 }
 
-div.photo-text {
-  width: 100%;
-  /*float: left;*/
-  margin-top: 10px;
+.photo-text {
+  width: 31%;
+  float: left;
+  padding: 0 1%;
+}
+
+.photo-gallery {
+  width: 66%;
+  float:right; 
 }
 
 p.item {
@@ -508,139 +510,59 @@ p.item {
   font-size: 14px;
 }
 
-/* -----------------------------------------
-   COMMENT
------------------------------------------ */
-
-#respond {
-  background: $grey; 
-  width: 90%;
-  float: left;  
-  padding: 15px 25px; 
-  margin-left: 10px; 
-  .form-allowed-tags {
-  display: none; 
-  }
-  text-area {
-  width: 95%; 
-  margin: 0 auto; 
-  }
-  border-radius: 5px; 
+body.single-memorabilia .single-content {
+  width: 100%; 
 }
 
-/* -----------------------------------------
-   SIDEBAR
------------------------------------------ */
+.intro {
+  width: 25%; 
+  float: left; 
+  margin-bottom: 2em; 
+}
 
-.home-sidebar {
+.intro-text {
+  width: 100%; 
+  float: left; 
+}
+
+.intro-photo {
+  width: 100%; 
+  float: right; 
+}
+
+/* ---- masonry ---- */
+
+.memorabilia-gallery {
+  width: 73%;
+  float: right; 
+  position: relative;  
+  overflow:hidden; 
+}
+
+/* clear fix */
+.memorabilia-gallery:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .item ---- */
+
+.single-memorabilia .item {
+  float: left;
   width: 30%;
-  float: right;
-  padding-left: 1%; 
-  margin-right: 15px; 
-  border-left: 1px solid $grey; 
-  ul {
-  margin: 0; 
-  padding: 0; 
-  }
+  height: auto;
+  background: transparent; 
+  padding: 2px; 
+  margin: 0;
 }
 
-.sidebar {
-  @extend .home-sidebar; 
-  border-left: none; 
-  margin-top: 50px; 
+.item img {
+  border: none;
 }
 
-.inside-box {
-  width: 25%;
-  float: left;
-}
-
-.uc-pin {
-  background: url('images/uc-pin.png') top left no-repeat;
-  width: 78px;
-  height: 80px;
-  margin: 10px auto 10px auto;
-}
-
-.sidebar-header, button {
-  height: 35px;
-  background: #c01313; /* Old browsers */
-background: -moz-linear-gradient(top,  #c01313 0%, #c01313 70%, #09021d 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c01313), color-stop(70%,#c01313), color-stop(100%,#09021d)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #c01313 0%,#c01313 70%,#09021d 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #c01313 0%,#c01313 70%,#09021d 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #c01313 0%,#c01313 70%,#09021d 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #c01313 0%,#c01313 70%,#09021d 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c01313', endColorstr='#09021d',GradientType=0 ); /* IE6-9 */
-
-  width: 100%;
-  text-align: center;
-  padding-top: 8px;
-  margin-bottom: 5px;
-  h1 {
-  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-  font-weight: 100;
-  font-size: 18px;
-  line-height: .8;
-}
-
-}
-
-button {
-  width: auto;
-}
-
-header.sidebar-header h1 a {
-  color: #fff;
-  font-size: 14px;
-  line-height: 80%;
-}
-
-.home-sidebar figure img {
-  text-align: center;
-  max-width: 98%; 
-  padding: 2px;
-  border: 1px solid #09021d;
-}
-
-aside.sidebar h5 {
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  background: #c01313; /* Old browsers */
-  background: -moz-linear-gradient(top,  #c01313 0%, #c01313 70%, #09021d 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c01313), color-stop(70%,#c01313), color-stop(100%,#09021d)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #c01313 0%,#c01313 70%,#09021d 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #c01313 0%,#c01313 70%,#09021d 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #c01313 0%,#c01313 70%,#09021d 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #c01313 0%,#c01313 70%,#09021d 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c01313', endColorstr='#09021d',GradientType=0 ); /* IE6-9 */
-  padding: 5px 10px;
-}
-
-.recent-posts {
-  overflow: hidden;
-  margin-bottom: 10px; 
-  .recent-posts-thumbnail {
-  float: left;
-  width: 35%;
-  }
-  .recent-posts-title {
-  float: right;
-  width: 60%;
-  padding-left: 2%;
-  }
-}
-
-aside.sidebar h4, aside.home-sidebar h4 {
-  font-size: 1em;
-  padding: 0; 
-  margin: 0; 
-  a {
-  margin: 0; 
-  padding: 0; 
-  }
-}
+.item.width2 { width: 60%; }
+.item.height2 { height: 300px; }
 
 /* -----------------------------------------
    PLACES
@@ -780,6 +702,139 @@ aside.sidebar h4, aside.home-sidebar h4 {
   font-size: 1.2em
 }
 
+/* -----------------------------------------
+   COMMENT
+----------------------------------------- */
+
+#respond {
+  background: $grey; 
+  width: 90%;
+  float: left;  
+  padding: 15px 25px; 
+  margin-left: 10px; 
+  .form-allowed-tags {
+  display: none; 
+  }
+  text-area {
+  width: 95%; 
+  margin: 0 auto; 
+  }
+  border-radius: 5px; 
+}
+
+/* -----------------------------------------
+   SIDEBAR
+----------------------------------------- */
+
+.home-sidebar {
+  width: 30%;
+  float: right;
+  padding-left: 1%; 
+  margin-right: 15px; 
+  border-left: 1px solid $grey; 
+  ul {
+  margin: 0; 
+  padding: 0; 
+  }
+}
+
+.sidebar {
+  @extend .home-sidebar; 
+  border-left: none; 
+  margin-top: 50px; 
+}
+
+.inside-box {
+  width: 25%;
+  float: left;
+}
+
+.uc-pin {
+  background: url('images/uc-pin.png') top left no-repeat;
+  width: 78px;
+  height: 80px;
+  margin: 10px auto 10px auto;
+}
+
+.sidebar-header, button {
+  height: 35px;
+  background: #c01313; /* Old browsers */
+background: -moz-linear-gradient(top,  #c01313 0%, #c01313 70%, #09021d 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c01313), color-stop(70%,#c01313), color-stop(100%,#09021d)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #c01313 0%,#c01313 70%,#09021d 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #c01313 0%,#c01313 70%,#09021d 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #c01313 0%,#c01313 70%,#09021d 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #c01313 0%,#c01313 70%,#09021d 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c01313', endColorstr='#09021d',GradientType=0 ); /* IE6-9 */
+
+  width: 100%;
+  text-align: center;
+  padding-top: 8px;
+  margin-bottom: 5px;
+  h1 {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: .8;
+}
+
+}
+
+button {
+  width: auto;
+}
+
+header.sidebar-header h1 a {
+  color: #fff;
+  font-size: 14px;
+  line-height: 80%;
+}
+
+.home-sidebar figure img {
+  text-align: center;
+  max-width: 98%; 
+  padding: 2px;
+  border: 1px solid #09021d;
+}
+
+aside.sidebar h5 {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  background: #c01313; /* Old browsers */
+  background: -moz-linear-gradient(top,  #c01313 0%, #c01313 70%, #09021d 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c01313), color-stop(70%,#c01313), color-stop(100%,#09021d)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #c01313 0%,#c01313 70%,#09021d 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #c01313 0%,#c01313 70%,#09021d 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #c01313 0%,#c01313 70%,#09021d 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #c01313 0%,#c01313 70%,#09021d 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c01313', endColorstr='#09021d',GradientType=0 ); /* IE6-9 */
+  padding: 5px 10px;
+}
+
+.recent-posts {
+  overflow: hidden;
+  margin-bottom: 10px; 
+  .recent-posts-thumbnail {
+  float: left;
+  width: 35%;
+  }
+  .recent-posts-title {
+  float: right;
+  width: 60%;
+  padding-left: 2%;
+  }
+}
+
+aside.sidebar h4, aside.home-sidebar h4 {
+  font-size: 1em;
+  padding: 0; 
+  margin: 0; 
+  a {
+  margin: 0; 
+  padding: 0; 
+  }
+}
 
 /* -----------------------------------------
    SUB FOOTER

@@ -371,6 +371,11 @@ object {
 /*--------------------------------------------------------------
 12.2 Galleries
 --------------------------------------------------------------*/
+
+#gallery-1 img {
+	border: none !important; 
+}
+
 .gallery {
 	margin-bottom: 1.5em;
 }
@@ -384,7 +389,8 @@ object {
 	max-width: 50%;
 }
 .gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
+	max-width: 31.83%;
+	margin-right: 1%; 
 }
 .gallery-columns-4 .gallery-item {
 	max-width: 25%;

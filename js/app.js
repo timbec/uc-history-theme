@@ -33,9 +33,9 @@ $(document).ready(function() {
 
   //Memorabilia
 
-$('.gallery').find('dt').addClass('item'); 
+//$('.gallery').find('dt').addClass('item'); 
 
-    var $container = $('.isotope');
+    var $container = $('.memorabilia-gallery');
     // initialize
     $container.masonry({
       columnWidth: 225,
@@ -43,7 +43,7 @@ $('.gallery').find('dt').addClass('item');
     });
 
 
-  $('.item').magnificPopup({
+  $('.item, .gallery-item').magnificPopup({
     delegate: 'a',
     type: 'image',
     tLoading: 'Loading image #%curr%...',
@@ -61,15 +61,15 @@ $('.gallery').find('dt').addClass('item');
     }
   });
 
-  $('.popup-youtube').magnificPopup({
-    disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
+  // $('.popup-youtube').magnificPopup({
+  //   disableOn: 700,
+  //   type: 'iframe',
+  //   mainClass: 'mfp-fade',
+  //   removalDelay: 160,
+  //   preloader: false,
 
-    fixedContentPos: false
-  });
+  //   fixedContentPos: false
+  // });
 
 $(window).bind('scroll', function(e) {
     parallax();

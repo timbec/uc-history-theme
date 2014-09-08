@@ -41,6 +41,7 @@
 
 
 	<header id="main-header">
+        <div class="block">
             <nav class="search-bar">
         <?php get_template_part('searchform'); ?>
             </nav>
@@ -53,17 +54,20 @@
             </div><!--end .title-block-->
 
             <div id="atomic-symbol"></div>
+                <a class="nav-btn" id="nav-open-btn" href="#nav">Book Navigation</a>
+            </div><!--end .block-->
+    </header>
 
-	</header>
                 <nav id="nav" class="main-navigation group" role="navigation">
-
             <h1 class="menu-toggle"><?php _e( 'Menu', 'underscores' ); ?></h1>
             
+            <div class="block">
             <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'underscores' ); ?></a>
 
             <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-
-                </nav><!-- #site-navigation -->
+            <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
+            </div>
+        </nav><!-- #site-navigation -->
 
 
 <!-- Begin Page -->

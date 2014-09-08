@@ -44,7 +44,7 @@
 
   header#main-header, footer#main-footer {
     width: 100%;
-    height: 17em;
+    height: auto;
   }
 
   .container {
@@ -55,6 +55,17 @@
     width: auto;
   }
 
+  .main-navigation a {
+  font-size: 1.1rem; 
+  }
+
+}
+
+@media (max-width: 960px) {
+
+  ul#menu-main-navigation {
+    margin-left: 0%; 
+  }
 }
 
 
@@ -175,6 +186,14 @@
       width: 98%;
     }
 
+    .photo-text {
+    width: 100%; 
+    }
+
+    .photo-gallery {
+    width: 100%; 
+    }
+
     /******************************
     INNER PAGES
     ***************************************/
@@ -246,6 +265,16 @@
       height: auto;
     }
 
+    /*memorabilia*/
+
+      .intro {
+        width: 100%; 
+      }
+
+      .memorabilia-gallery {
+        width: 100%; 
+        }
+
         /*PLACES*/
 
     #places-content .image-gallery, #places-content .link, #places-content .single-image {
@@ -310,6 +339,11 @@
 	padding: 12px 8px; 
 	}
 
+  #main-header .nav-btn {
+  top: 17em;
+  left: .5em;  
+  }
+
     article.articles, article.bottom-box {
     width: 100%;
   }
@@ -337,6 +371,10 @@
   .gallery br {
     clear: none !important;
   }
+  .gallery-columns-3 .gallery-item {
+  width: 48%; 
+  }
+
 }
 
 
@@ -353,6 +391,17 @@
     margin-left: auto;
   }
 
+  #latest-posts figure {
+  width: 100%; 
+  }
+
+  #latest-posts .latest-text {
+  width: 100%; 
+  }
+
+  section.top-boxes .articles {
+  width: 100%; 
+  }
 
   article p a img {
     float: none;

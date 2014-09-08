@@ -1,5 +1,6 @@
 <?php
 /**
+* Template Name: Memorabilia
  * Single
  *
  * Loop container for single post content
@@ -12,7 +13,7 @@
 get_header(); ?>
 
     <!-- Main Content -->
-    <div class="single-content" role="main">
+    <div id="memorabilia-full-width" class="single-content" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -24,5 +25,4 @@ get_header(); ?>
 
     </div>
     <!-- End Main Content -->
-
 <?php get_footer(); ?>

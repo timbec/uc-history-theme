@@ -163,7 +163,7 @@ function uc_history_scripts() {
 
 	wp_enqueue_script( 'uc_history-magnific-popup', get_template_directory_uri() . '/js/vendor/jquery.magnific-popup.min.js', array(), '20130115', true );
 
-	wp_enqueue_script( 'uc_history-fivids', get_template_directory_uri() . '/js/vendor/jquery.fitvidss.js', array(), '20130115', true );
+	wp_enqueue_script( 'uc_history-fivids', get_template_directory_uri() . '/js/vendor/jquery.fitvids.js', array(), '20130115', true );
 
 	wp_enqueue_script( 'initialize', get_template_directory_uri() . '/js/app.js' );
 
