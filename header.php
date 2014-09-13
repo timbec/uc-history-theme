@@ -54,7 +54,7 @@
             </div><!--end .title-block-->
 
             <div id="atomic-symbol"></div>
-                <a class="nav-btn" id="nav-open-btn" href="#nav">Book Navigation</a>
+                <a class="nav-btn" id="nav-open-btn" href="#nav">Navigation</a>
             </div><!--end .block-->
     </header>
 
