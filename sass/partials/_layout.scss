@@ -33,7 +33,7 @@ body:after {
 
 /*Container*/
 
-.container {
+#container {
   max-width:1040px;
   background: rgba(255,255,255, 1);
   position: relative;
@@ -41,7 +41,7 @@ body:after {
   margin: 0 auto;
 }
 
-.container, header#main-header, footer#main-footer {
+#container, header#main-header, footer#main-footer {
   -webkit-box-shadow: 1px 1px 2px 2px #ccc;
   box-shadow: 1px 1px 2px 2px #ccc;
 }

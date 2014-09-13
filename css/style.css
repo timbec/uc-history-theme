@@ -1216,7 +1216,7 @@ body:after {
 
 /*Container*/
 /* line 36, ../sass/partials/_layout.scss */
-.container {
+#container {
   max-width: 1040px;
   background: white;
   position: relative;
@@ -1224,17 +1224,17 @@ body:after {
   margin: 0 auto;
 }
 /* line 40, ../sass/partials/_mixins.scss */
-.container:before, .container:after {
+#container:before, #container:after {
   content: "";
   display: table;
 }
 /* line 44, ../sass/partials/_mixins.scss */
-.container:after {
+#container:after {
   clear: both;
 }
 
 /* line 44, ../sass/partials/_layout.scss */
-.container, header#main-header, footer#main-footer {
+#container, header#main-header, footer#main-footer {
   -webkit-box-shadow: 1px 1px 2px 2px #ccc;
   box-shadow: 1px 1px 2px 2px #ccc;
 }

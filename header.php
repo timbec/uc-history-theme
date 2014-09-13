@@ -69,6 +69,5 @@
             </div>
         </nav><!-- #site-navigation -->
 
-
 <!-- Begin Page -->
-<div class="container group">
+<div id="container" class="group">

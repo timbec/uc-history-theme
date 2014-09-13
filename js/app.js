@@ -1,10 +1,10 @@
-$(document).ready(function() {
+jQuery(document).ready(function() {
 
 /*************************
 **   =FLEX SLIDER
 ***************************/
 
-    $('.flexslider').flexslider({
+    jQuery('.flexslider').flexslider({
     	slideshow: true,
     	animation: "fade",
     	touch: true,
@@ -18,7 +18,7 @@ $(document).ready(function() {
 **   =LOGO CAROUSEL
 ***************************/
 
-  $("#carousel-boxes").bxSlider({
+  jQuery("#carousel-boxes").bxSlider({
 				  minSlides: 2,
   				maxSlides: 4,
   				slideWidth: 225,
@@ -33,17 +33,17 @@ $(document).ready(function() {
 
   //Memorabilia
 
-//$('.gallery').find('dt').addClass('item'); 
+//jQuery('.gallery').find('dt').addClass('item'); 
 
-    var $container = $('.memorabilia-gallery');
+    var jQuerycontainer = jQuery('.memorabilia-gallery');
     // initialize
-    $container.masonry({
+    jQuerycontainer.masonry({
       columnWidth: 225,
       itemSelector: '.item'
     });
 
 
-  $('.item, .gallery-item').magnificPopup({
+  jQuery('.item, .gallery-item').magnificPopup({
     delegate: 'a',
     type: 'image',
     tLoading: 'Loading image #%curr%...',
@@ -61,7 +61,7 @@ $(document).ready(function() {
     }
   });
 
-  // $('.popup-youtube').magnificPopup({
+  // jQuery('.popup-youtube').magnificPopup({
   //   disableOn: 700,
   //   type: 'iframe',
   //   mainClass: 'mfp-fade',
@@ -71,19 +71,19 @@ $(document).ready(function() {
   //   fixedContentPos: false
   // });
 
-$(window).bind('scroll', function(e) {
+jQuery(window).bind('scroll', function(e) {
     parallax();
   });
 
 });
 
 function parallax() {
-  var scrollPosition = $(window).scrollTop();
-  $('#places-header')
+  var scrollPosition = jQuery(window).scrollTop();
+  jQuery('#places-header')
     .css('top', (10 + (scrollPosition * .45)) + 'px')
     .css('opacity', (1 - (scrollPosition * .001)));
 
-  //$('.scroll').css('top', (-400 + (scrollPosition * .5)) + 'px')
+  //jQuery('.scroll').css('top', (-400 + (scrollPosition * .5)) + 'px')
 }
 
 
@@ -93,10 +93,10 @@ function parallax() {
 **   =Marquee News Ticker
 ***************************/
 
-$(function(){
-        var $mwo = $('.marquee-with-options');
-        $('.marquee').marquee();
-        $('.marquee-with-options').marquee({
+jQuery(function(){
+        var jQuerymwo = jQuery('.marquee-with-options');
+        jQuery('.marquee').marquee();
+        jQuery('.marquee-with-options').marquee({
           //speed in milliseconds of the marquee
           speed: 5000,
           //gap in pixels between the tickers
@@ -112,29 +112,29 @@ $(function(){
         });
 
         //pause and resume links
-        $('.pause').click(function(e){
+        jQuery('.pause').click(function(e){
           e.preventDefault();
-          $mwo.trigger('pause');
+          jQuerymwo.trigger('pause');
         });
-        $('.resume').click(function(e){
+        jQuery('.resume').click(function(e){
           e.preventDefault();
-          $mwo.trigger('resume');
+          jQuerymwo.trigger('resume');
         });
         //toggle
-        $('.toggle').hover(function(e){
-          $mwo.trigger('pause');
+        jQuery('.toggle').hover(function(e){
+          jQuerymwo.trigger('pause');
         },function(){
-          $mwo.trigger('resume');
+          jQuerymwo.trigger('resume');
         })
         .click(function(e){
           e.preventDefault();
-        })
+        }); 
 });
 
 /**********************
   FITVIDS
   ***********************/
 
-$(function(){
-  $(".video-container").fitVids();
+jQuery(function(){
+  jQuery(".video-container").fitVids();
 }); 

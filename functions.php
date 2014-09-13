@@ -5,6 +5,11 @@
  * @package uc_history
  */
 
+/**
+ * Load util functions
+ */
+require get_template_directory() . '/inc/utils.php';
+
 require_once('inc/custom-post-types.php'); // custom post types
 
 /**
@@ -115,28 +120,28 @@ add_action( 'widgets_init', 'uc_history_widgets_init' );
 
 /* pull jquery from google's CDN. If it's not available, grab the local copy. Code from wp.tutsplus.com :-) */
 
-$url = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'; // the URL to check against
-$test_url = @fopen($url,'r'); // test parameters
-if( $test_url !== false ) { // test if the URL exists
+// $url = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'; // the URL to check against
+// $test_url = @fopen($url,'r'); // test parameters
+// if( $test_url !== false ) { // test if the URL exists
 
-    function load_external_jQuery() { // load external file
-        wp_deregister_script( 'jquery' ); // deregisters the default WordPress jQuery
-        wp_register_script('jquery', 'http://code.jquery.com/jquery-1.10.1.min.js'); // register the external file
-        //wp_register_script('jquery', 'http://fotorama.s3.amazonaws.com/4.2.1/fotorama.js'); // register the external file
-        wp_enqueue_script('jquery'); // enqueue the external file
-    }
+//     function load_external_jQuery() { // load external file
+//         wp_deregister_script( 'jquery' ); // deregisters the default WordPress jQuery
+//         wp_register_script('jquery', 'http://code.jquery.com/jquery-1.10.1.min.js'); // register the external file
+//         //wp_register_script('jquery', 'http://fotorama.s3.amazonaws.com/4.2.1/fotorama.js'); // register the external file
+//         wp_enqueue_script('jquery'); // enqueue the external file
+//     }
 
-    add_action('wp_enqueue_scripts', 'load_external_jQuery'); // initiate the function
-} else {
+//     add_action('wp_enqueue_scripts', 'load_external_jQuery'); // initiate the function
+// } else {
 
-    function load_local_jQuery() {
-        wp_deregister_script('jquery'); // initiate the function
-        wp_register_script('jquery', bloginfo('template_url').'/js/jquery-2.0.3.min.js', __FILE__, false, '2.0.3', true); // register the local file
-        wp_enqueue_script('jquery'); // enqueue the local file
-    }
+//     function load_local_jQuery() {
+//         wp_deregister_script('jquery'); // initiate the function
+//         wp_register_script('jquery', bloginfo('template_url').'/js/jquery-2.0.3.min.js', __FILE__, false, '2.0.3', true); // register the local file
+//         wp_enqueue_script('jquery'); // enqueue the local file
+//     }
 
-    add_action('wp_enqueue_scripts', 'load_local_jQuery'); // initiate the function
-}
+//     add_action('wp_enqueue_scripts', 'load_local_jQuery'); // initiate the function
+// }
 
 
 /**
@@ -167,12 +172,48 @@ function uc_history_scripts() {
 
 	wp_enqueue_script( 'initialize', get_template_directory_uri() . '/js/app.js', array(), '20130115', true);
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'uc_history-keyboard-image-navigation', get_template_directory_uri() . '/js/vendor/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
+	}
+
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	} elseif ( is_home() || is_front_page() || is_archive() || is_search() ) {
+		global $wp_rewrite;
+
+		wp_enqueue_script( 'uc_history-loop', get_template_directory_uri() . '/js/loop.js', array( 'jquery', 'backbone', 'underscore', 'wp-api'  ), '1.0', true );
+
+		$queried_object = get_queried_object();
+
+		$local = array(
+			'loopType' => 'home',
+			'queriedObject' => $queried_object,
+			'pathInfo' => array(
+				'author_permastruct' => $wp_rewrite->get_author_permastruct(),
+				'host' => preg_replace( '#^http(s)?://#i', '', untrailingslashit( get_option( 'home' ) ) ),
+				'path' => uc_history_get_request_path(),
+				'use_trailing_slashes' => $wp_rewrite->use_trailing_slashes,
+				'parameters' => uc_history_get_request_parameters(),
+			),
+		);
+
+		if ( is_category() || is_tag() || is_tax() ) {
+			$local['loopType'] = 'archive';
+			$local['taxonomy'] = get_taxonomy( $queried_object->taxonomy );
+		} elseif ( is_search() ) {
+			$local['loopType'] = 'search';
+			$local['searchQuery'] = get_search_query();
+		} elseif ( is_author() ) {
+			$local['loopType'] = 'author';
+		}
+		
+		//set the page we're on so that Backbone can load the proper state
+		if ( is_paged() ) {
+			$local['page'] = absint( get_query_var( 'paged' ) ) + 1;
+		}
+
+		wp_localize_script( 'uc_history-loop', 'settings', $local );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'uc_history_scripts');
