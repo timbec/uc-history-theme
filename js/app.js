@@ -35,9 +35,9 @@ jQuery(document).ready(function() {
 
 //jQuery('.gallery').find('dt').addClass('item'); 
 
-    var jQuerycontainer = jQuery('.memorabilia-gallery');
+    var container = jQuery('.memorabilia-gallery');
     // initialize
-    jQuerycontainer.masonry({
+    container.masonry({
       columnWidth: 225,
       itemSelector: '.item'
     });
